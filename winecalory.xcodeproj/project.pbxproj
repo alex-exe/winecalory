@@ -15,6 +15,7 @@
 		FA77A9772B9D03F4009D7D2A /* winecalory_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9762B9D03F4009D7D2A /* winecalory_Watch_AppTests.swift */; };
 		FA77A9812B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9802B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift */; };
 		FA77A9832B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9822B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift */; };
+		FA77A9952B9D0D5C009D7D2A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9942B9D0D5C009D7D2A /* HealthKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,9 @@
 		FA77A97C2B9D03F4009D7D2A /* winecalory Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "winecalory Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA77A9802B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winecalory_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		FA77A9822B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winecalory_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA77A9932B9D0BE7009D7D2A /* winecalory Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "winecalory Watch App.entitlements"; sourceTree = "<group>"; };
+		FA77A9942B9D0D5C009D7D2A /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		FA77A9962B9D0F5A009D7D2A /* winecalory-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "winecalory-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +122,11 @@
 		FA77A9642B9D03F2009D7D2A /* winecalory Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				FA77A9962B9D0F5A009D7D2A /* winecalory-Watch-App-Info.plist */,
+				FA77A9932B9D0BE7009D7D2A /* winecalory Watch App.entitlements */,
 				FA77A9652B9D03F2009D7D2A /* winecaloryApp.swift */,
 				FA77A9672B9D03F2009D7D2A /* ContentView.swift */,
+				FA77A9942B9D0D5C009D7D2A /* HealthKitManager.swift */,
 				FA77A9692B9D03F4009D7D2A /* Assets.xcassets */,
 				FA77A96B2B9D03F4009D7D2A /* Preview Content */,
 			);
@@ -311,6 +318,7 @@
 			files = (
 				FA77A9682B9D03F2009D7D2A /* ContentView.swift in Sources */,
 				FA77A9662B9D03F2009D7D2A /* winecaloryApp.swift in Sources */,
+				FA77A9952B9D0D5C009D7D2A /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,12 +479,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "winecalory Watch App/winecalory Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"winecalory Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = CQJSVL4NGR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "winecalory-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = winecalory;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "REad Calories";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,7 +503,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.3;
 			};
 			name = Debug;
 		};
@@ -500,12 +512,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "winecalory Watch App/winecalory Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"winecalory Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = CQJSVL4NGR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "winecalory-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = winecalory;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "REad Calories";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -521,7 +537,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.3;
 			};
 			name = Release;
 		};
@@ -531,6 +547,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQJSVL4NGR;
 				INFOPLIST_KEY_CFBundleDisplayName = winecalory;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexe.winecalory;
@@ -546,6 +563,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQJSVL4NGR;
 				INFOPLIST_KEY_CFBundleDisplayName = winecalory;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexe.winecalory;
@@ -563,6 +581,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQJSVL4NGR;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexe.winecalory-Watch-AppTests";
@@ -583,6 +602,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQJSVL4NGR;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexe.winecalory-Watch-AppTests";
@@ -603,6 +623,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQJSVL4NGR;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexe.winecalory-Watch-AppUITests";
@@ -622,6 +643,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQJSVL4NGR;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexe.winecalory-Watch-AppUITests";

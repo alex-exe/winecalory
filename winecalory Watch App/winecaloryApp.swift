@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 @main
 struct winecalory_Watch_AppApp: App {
