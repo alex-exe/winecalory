@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA77A9612B9D03F2009D7D2A /* winecalory Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA77A9602B9D03F2009D7D2A /* winecalory Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA77A9662B9D03F2009D7D2A /* winecaloryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9652B9D03F2009D7D2A /* winecaloryApp.swift */; };
+		FA77A9682B9D03F2009D7D2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9672B9D03F2009D7D2A /* ContentView.swift */; };
+		FA77A96A2B9D03F4009D7D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA77A9692B9D03F4009D7D2A /* Assets.xcassets */; };
+		FA77A96D2B9D03F4009D7D2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA77A96C2B9D03F4009D7D2A /* Preview Assets.xcassets */; };
+		FA77A9772B9D03F4009D7D2A /* winecalory_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9762B9D03F4009D7D2A /* winecalory_Watch_AppTests.swift */; };
+		FA77A9812B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9802B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift */; };
+		FA77A9832B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9822B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA77A9622B9D03F2009D7D2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA77A9542B9D03F2009D7D2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA77A95F2B9D03F2009D7D2A;
+			remoteInfo = "winecalory Watch App";
+		};
+		FA77A9732B9D03F4009D7D2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA77A9542B9D03F2009D7D2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA77A95F2B9D03F2009D7D2A;
+			remoteInfo = "winecalory Watch App";
+		};
+		FA77A97D2B9D03F4009D7D2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA77A9542B9D03F2009D7D2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA77A95F2B9D03F2009D7D2A;
+			remoteInfo = "winecalory Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA77A9892B9D03F4009D7D2A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FA77A9612B9D03F2009D7D2A /* winecalory Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA77A95A2B9D03F2009D7D2A /* winecalory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winecalory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA77A9602B9D03F2009D7D2A /* winecalory Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "winecalory Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA77A9652B9D03F2009D7D2A /* winecaloryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winecaloryApp.swift; sourceTree = "<group>"; };
+		FA77A9672B9D03F2009D7D2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA77A9692B9D03F4009D7D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA77A96C2B9D03F4009D7D2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA77A9722B9D03F4009D7D2A /* winecalory Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "winecalory Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA77A9762B9D03F4009D7D2A /* winecalory_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winecalory_Watch_AppTests.swift; sourceTree = "<group>"; };
+		FA77A97C2B9D03F4009D7D2A /* winecalory Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "winecalory Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA77A9802B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winecalory_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		FA77A9822B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winecalory_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA77A95D2B9D03F2009D7D2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA77A96F2B9D03F4009D7D2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA77A9792B9D03F4009D7D2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA77A9532B9D03F2009D7D2A = {
+			isa = PBXGroup;
+			children = (
+				FA77A9642B9D03F2009D7D2A /* winecalory Watch App */,
+				FA77A9752B9D03F4009D7D2A /* winecalory Watch AppTests */,
+				FA77A97F2B9D03F4009D7D2A /* winecalory Watch AppUITests */,
+				FA77A95B2B9D03F2009D7D2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA77A95B2B9D03F2009D7D2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA77A95A2B9D03F2009D7D2A /* winecalory.app */,
+				FA77A9602B9D03F2009D7D2A /* winecalory Watch App.app */,
+				FA77A9722B9D03F4009D7D2A /* winecalory Watch AppTests.xctest */,
+				FA77A97C2B9D03F4009D7D2A /* winecalory Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA77A9642B9D03F2009D7D2A /* winecalory Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				FA77A9652B9D03F2009D7D2A /* winecaloryApp.swift */,
+				FA77A9672B9D03F2009D7D2A /* ContentView.swift */,
+				FA77A9692B9D03F4009D7D2A /* Assets.xcassets */,
+				FA77A96B2B9D03F4009D7D2A /* Preview Content */,
+			);
+			path = "winecalory Watch App";
+			sourceTree = "<group>";
+		};
+		FA77A96B2B9D03F4009D7D2A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FA77A96C2B9D03F4009D7D2A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA77A9752B9D03F4009D7D2A /* winecalory Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA77A9762B9D03F4009D7D2A /* winecalory_Watch_AppTests.swift */,
+			);
+			path = "winecalory Watch AppTests";
+			sourceTree = "<group>";
+		};
+		FA77A97F2B9D03F4009D7D2A /* winecalory Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA77A9802B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift */,
+				FA77A9822B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "winecalory Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA77A9592B9D03F2009D7D2A /* winecalory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA77A98A2B9D03F4009D7D2A /* Build configuration list for PBXNativeTarget "winecalory" */;
+			buildPhases = (
+				FA77A9582B9D03F2009D7D2A /* Resources */,
+				FA77A9892B9D03F4009D7D2A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA77A9632B9D03F2009D7D2A /* PBXTargetDependency */,
+			);
+			name = winecalory;
+			productName = winecalory;
+			productReference = FA77A95A2B9D03F2009D7D2A /* winecalory.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		FA77A95F2B9D03F2009D7D2A /* winecalory Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA77A9862B9D03F4009D7D2A /* Build configuration list for PBXNativeTarget "winecalory Watch App" */;
+			buildPhases = (
+				FA77A95C2B9D03F2009D7D2A /* Sources */,
+				FA77A95D2B9D03F2009D7D2A /* Frameworks */,
+				FA77A95E2B9D03F2009D7D2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "winecalory Watch App";
+			productName = "winecalory Watch App";
+			productReference = FA77A9602B9D03F2009D7D2A /* winecalory Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA77A9712B9D03F4009D7D2A /* winecalory Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA77A98D2B9D03F4009D7D2A /* Build configuration list for PBXNativeTarget "winecalory Watch AppTests" */;
+			buildPhases = (
+				FA77A96E2B9D03F4009D7D2A /* Sources */,
+				FA77A96F2B9D03F4009D7D2A /* Frameworks */,
+				FA77A9702B9D03F4009D7D2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA77A9742B9D03F4009D7D2A /* PBXTargetDependency */,
+			);
+			name = "winecalory Watch AppTests";
+			productName = "winecalory Watch AppTests";
+			productReference = FA77A9722B9D03F4009D7D2A /* winecalory Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA77A97B2B9D03F4009D7D2A /* winecalory Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA77A9902B9D03F4009D7D2A /* Build configuration list for PBXNativeTarget "winecalory Watch AppUITests" */;
+			buildPhases = (
+				FA77A9782B9D03F4009D7D2A /* Sources */,
+				FA77A9792B9D03F4009D7D2A /* Frameworks */,
+				FA77A97A2B9D03F4009D7D2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA77A97E2B9D03F4009D7D2A /* PBXTargetDependency */,
+			);
+			name = "winecalory Watch AppUITests";
+			productName = "winecalory Watch AppUITests";
+			productReference = FA77A97C2B9D03F4009D7D2A /* winecalory Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA77A9542B9D03F2009D7D2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					FA77A9592B9D03F2009D7D2A = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					FA77A95F2B9D03F2009D7D2A = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					FA77A9712B9D03F4009D7D2A = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = FA77A95F2B9D03F2009D7D2A;
+					};
+					FA77A97B2B9D03F4009D7D2A = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = FA77A95F2B9D03F2009D7D2A;
+					};
+				};
+			};
+			buildConfigurationList = FA77A9572B9D03F2009D7D2A /* Build configuration list for PBXProject "winecalory" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA77A9532B9D03F2009D7D2A;
+			productRefGroup = FA77A95B2B9D03F2009D7D2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA77A9592B9D03F2009D7D2A /* winecalory */,
+				FA77A95F2B9D03F2009D7D2A /* winecalory Watch App */,
+				FA77A9712B9D03F4009D7D2A /* winecalory Watch AppTests */,
+				FA77A97B2B9D03F4009D7D2A /* winecalory Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA77A9582B9D03F2009D7D2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA77A95E2B9D03F2009D7D2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA77A96D2B9D03F4009D7D2A /* Preview Assets.xcassets in Resources */,
+				FA77A96A2B9D03F4009D7D2A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA77A9702B9D03F4009D7D2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA77A97A2B9D03F4009D7D2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA77A95C2B9D03F2009D7D2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA77A9682B9D03F2009D7D2A /* ContentView.swift in Sources */,
+				FA77A9662B9D03F2009D7D2A /* winecaloryApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA77A96E2B9D03F4009D7D2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA77A9772B9D03F4009D7D2A /* winecalory_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA77A9782B9D03F4009D7D2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA77A9812B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift in Sources */,
+				FA77A9832B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA77A9632B9D03F2009D7D2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA77A95F2B9D03F2009D7D2A /* winecalory Watch App */;
+			targetProxy = FA77A9622B9D03F2009D7D2A /* PBXContainerItemProxy */;
+		};
+		FA77A9742B9D03F4009D7D2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA77A95F2B9D03F2009D7D2A /* winecalory Watch App */;
+			targetProxy = FA77A9732B9D03F4009D7D2A /* PBXContainerItemProxy */;
+		};
+		FA77A97E2B9D03F4009D7D2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA77A95F2B9D03F2009D7D2A /* winecalory Watch App */;
+			targetProxy = FA77A97D2B9D03F4009D7D2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FA77A9842B9D03F4009D7D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA77A9852B9D03F4009D7D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FA77A9872B9D03F4009D7D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"winecalory Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = winecalory;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexe.winecalory.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		FA77A9882B9D03F4009D7D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"winecalory Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = winecalory;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexe.winecalory.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
+		FA77A98B2B9D03F4009D7D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_KEY_CFBundleDisplayName = winecalory;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexe.winecalory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FA77A98C2B9D03F4009D7D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_KEY_CFBundleDisplayName = winecalory;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexe.winecalory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA77A98E2B9D03F4009D7D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexe.winecalory-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/winecalory Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/winecalory Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		FA77A98F2B9D03F4009D7D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexe.winecalory-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/winecalory Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/winecalory Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
+		FA77A9912B9D03F4009D7D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexe.winecalory-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "winecalory Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		FA77A9922B9D03F4009D7D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexe.winecalory-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "winecalory Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA77A9572B9D03F2009D7D2A /* Build configuration list for PBXProject "winecalory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA77A9842B9D03F4009D7D2A /* Debug */,
+				FA77A9852B9D03F4009D7D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA77A9862B9D03F4009D7D2A /* Build configuration list for PBXNativeTarget "winecalory Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA77A9872B9D03F4009D7D2A /* Debug */,
+				FA77A9882B9D03F4009D7D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA77A98A2B9D03F4009D7D2A /* Build configuration list for PBXNativeTarget "winecalory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA77A98B2B9D03F4009D7D2A /* Debug */,
+				FA77A98C2B9D03F4009D7D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA77A98D2B9D03F4009D7D2A /* Build configuration list for PBXNativeTarget "winecalory Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA77A98E2B9D03F4009D7D2A /* Debug */,
+				FA77A98F2B9D03F4009D7D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA77A9902B9D03F4009D7D2A /* Build configuration list for PBXNativeTarget "winecalory Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA77A9912B9D03F4009D7D2A /* Debug */,
+				FA77A9922B9D03F4009D7D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA77A9542B9D03F2009D7D2A /* Project object */;
+}
