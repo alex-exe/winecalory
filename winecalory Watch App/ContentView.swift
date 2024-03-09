@@ -1,21 +1,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var caloriesBurned: Double = 2020
-
+    @State private var caloriesBurned: Double = 0
+    @StateObject private var userSettings = UserSettings()
+    @State private var showingSettings = false
+    
     var body: some View {
-        let lang = Bundle.main.preferredLocalizations.first ?? "en"
-        
         VStack {
-            
-            Image(systemName: "wineglass")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+            List {
+                VStack {
+                    Image(systemName: "wineglass")
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
 
-            Text(wineText(for: self.caloriesBurned, lang: lang))
-                .padding()
+                    Text(wineText(for: self.caloriesBurned, lang: "en")) // Пример использования английского языка напрямую
+                        .padding()
+                }
+            }
+            Button("Settings") {
+                showingSettings.toggle()
+            }
+            .font(.system(size: 12)) // Уменьшаем размер шрифта кнопки
+            .padding(5) // Уменьшаем внутренние отступы кнопки
+            .buttonStyle(PlainButtonStyle()) // Можете экспериментировать со стилями кнопок
+
+            .sheet(isPresented: $showingSettings) {
+                SettingsView()
+            }
         }
-        .padding()
         .onAppear {
             HealthKitManager.shared.requestAuthorization { authorized in
                 if authorized {
@@ -25,11 +37,15 @@ struct ContentView: View {
                 }
             }
         }
+        .environmentObject(userSettings)
     }
-    
+
     func wineText(for caloriesBurned: Double, lang: String) -> String {
+        let drinkType = userSettings.selectedDrinkType // Получаем выбранный тип напитка
+        let caloriesPerServing = drinkType.caloriesPerServing
+
         let calories = Int(caloriesBurned)
-        let glasses = calories / 120
+        let glasses = calories / caloriesPerServing
 
         // Объединенная функция для русского и украинского языков
         func slavicWord(for count: Int, singular: String, few: String, many: String) -> String {
@@ -64,15 +80,25 @@ struct ContentView: View {
             }
         }()
 
+        let drinkWord: String
+        switch lang {
+        case "ru":
+            drinkWord = drinkType == .wine ? "вина" : drinkType == .beer ? "пива" : "эля"
+        case "uk":
+            drinkWord = drinkType == .wine ? "вина" : drinkType == .beer ? "пива" : "елю"
+        default:
+            drinkWord = drinkType == .wine ? "of wine" : drinkType == .beer ? "of beer" : "of ale"
+        }
+        
         if glasses < 1 {
             let noWineText = {
                 switch lang {
                 case "ru":
-                    return "Никакого вина пока не заработано!"
+                    return "Никакого \(drinkWord) не заработано!"
                 case "uk":
-                    return "Жодного келиха не зароблено!"
+                    return "Жодного келиха \(drinkWord) не зароблено!"
                 default:
-                    return "You haven't earned any wine yet!"
+                    return "You have earned zero \(drinkWord) yet!"
                 }
             }()
             return "\(caloriesText)\n\(noWineText)"
@@ -91,14 +117,16 @@ struct ContentView: View {
             }
         }()
 
+
+
         let wineText = {
             switch lang {
             case "ru":
-                return "Тебе можно \(glasses) \(glassesWord) вина."
+                return "Тебе можно \(glasses) \(glassesWord) \(drinkWord)."
             case "uk":
-                return "Тобі можна \(glasses) \(glassesWord) вина."
+                return "Тобі можна \(glasses) \(glassesWord) \(drinkWord)."
             default:
-                return "You can have \(glasses) \(glassesWord) of wine."
+                return "You can have \(glasses) \(glassesWord) \(drinkWord)."
             }
         }()
         

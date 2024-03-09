@@ -8,11 +8,10 @@ struct SettingsView: View {
             Form {
                 Section(header: Text("Preferred Drink")) {
                     Picker(selection: $userSettings.selectedDrinkType, label: Text("Drink Type")) {
-                        ForEach(DrinkType.allCases) { drinkType in
+                        ForEach(DrinkType.allCases, id: \.self) { drinkType in
                             Text(drinkType.localizedName).tag(drinkType)
                         }
                     }
-                    .pickerStyle(MenuPickerStyle())
                 }
             }
             .navigationTitle("Settings")

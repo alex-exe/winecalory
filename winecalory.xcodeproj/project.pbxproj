@@ -16,6 +16,8 @@
 		FA77A9812B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9802B9D03F4009D7D2A /* winecalory_Watch_AppUITests.swift */; };
 		FA77A9832B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9822B9D03F4009D7D2A /* winecalory_Watch_AppUITestsLaunchTests.swift */; };
 		FA77A9952B9D0D5C009D7D2A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9942B9D0D5C009D7D2A /* HealthKitManager.swift */; };
+		FA77A9982B9D24EE009D7D2A /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9972B9D24ED009D7D2A /* UserSettings.swift */; };
+		FA77A99A2B9D2833009D7D2A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9992B9D2833009D7D2A /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		FA77A9932B9D0BE7009D7D2A /* winecalory Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "winecalory Watch App.entitlements"; sourceTree = "<group>"; };
 		FA77A9942B9D0D5C009D7D2A /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		FA77A9962B9D0F5A009D7D2A /* winecalory-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "winecalory-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FA77A9972B9D24ED009D7D2A /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		FA77A9992B9D2833009D7D2A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +130,11 @@
 				FA77A9932B9D0BE7009D7D2A /* winecalory Watch App.entitlements */,
 				FA77A9652B9D03F2009D7D2A /* winecaloryApp.swift */,
 				FA77A9672B9D03F2009D7D2A /* ContentView.swift */,
+				FA77A9992B9D2833009D7D2A /* SettingsView.swift */,
 				FA77A9942B9D0D5C009D7D2A /* HealthKitManager.swift */,
 				FA77A9692B9D03F4009D7D2A /* Assets.xcassets */,
 				FA77A96B2B9D03F4009D7D2A /* Preview Content */,
+				FA77A9972B9D24ED009D7D2A /* UserSettings.swift */,
 			);
 			path = "winecalory Watch App";
 			sourceTree = "<group>";
@@ -317,8 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA77A9682B9D03F2009D7D2A /* ContentView.swift in Sources */,
+				FA77A9982B9D24EE009D7D2A /* UserSettings.swift in Sources */,
 				FA77A9662B9D03F2009D7D2A /* winecaloryApp.swift in Sources */,
 				FA77A9952B9D0D5C009D7D2A /* HealthKitManager.swift in Sources */,
+				FA77A99A2B9D2833009D7D2A /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
