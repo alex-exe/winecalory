@@ -7,23 +7,25 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            List {
+            ScrollView {
                 VStack {
                     Image(systemName: "wineglass")
                         .imageScale(.large)
                         .foregroundStyle(.tint)
+                        .padding(.bottom, 2)
 
-                    Text(wineText(for: self.caloriesBurned, lang: "en")) // Пример использования английского языка напрямую
-                        .padding()
+                    Text(wineText(for: self.caloriesBurned, lang: "en"))
+                        .padding() // Убедитесь, что текст не налегает на края
                 }
+                .background(Color.clear) // Устанавливаем прозрачный фон
             }
+
             Button("Settings") {
                 showingSettings.toggle()
             }
-            .font(.system(size: 12)) // Уменьшаем размер шрифта кнопки
-            .padding(5) // Уменьшаем внутренние отступы кнопки
-            .buttonStyle(PlainButtonStyle()) // Можете экспериментировать со стилями кнопок
-
+            .font(.system(size: 12))
+            .padding(5)
+            .buttonStyle(PlainButtonStyle())
             .sheet(isPresented: $showingSettings) {
                 SettingsView()
             }
