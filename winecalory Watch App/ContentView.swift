@@ -4,16 +4,34 @@ struct ContentView: View {
     @State private var caloriesBurned: Double = 0
     @StateObject private var userSettings = UserSettings()
     @State private var showingSettings = false
+
     
     var body: some View {
+        let drinkType = userSettings.selectedDrinkType // Получаем выбранный тип напитка
+        let caloriesPerServing = drinkType.caloriesPerServing
+        let calories = Int(caloriesBurned)
+
+        let  completionPercentage = min((calories / caloriesPerServing) * 100, 100)
+
         VStack {
             ScrollView {
                 VStack {
                     Image(systemName: "wineglass")
                         .imageScale(.large)
-                        .foregroundStyle(.tint)
+                        .foregroundColor(.gray) // Базовый цвет иконки, будет виден за пределами градиента
+                        .overlay(
+                            LinearGradient(
+                                colors: [.red, .clear], // Замените на желаемые цвета
+                                startPoint: .bottom,
+                                endPoint: .top
+                            )
+                            .mask(
+                                Image(systemName: "wineglass")
+                                    .imageScale(.large)
+                            )
+                            .frame(height:  CGFloat(completionPercentage) * 44) // Регулируем высоту заполнения в соответствии с процентом
+                        )
                         .padding(.bottom, 2)
-
                     Text(wineText(for: self.caloriesBurned, lang: "en"))
                         .padding() // Убедитесь, что текст не налегает на края
                 }
