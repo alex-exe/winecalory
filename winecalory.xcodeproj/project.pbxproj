@@ -18,6 +18,7 @@
 		FA77A9952B9D0D5C009D7D2A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9942B9D0D5C009D7D2A /* HealthKitManager.swift */; };
 		FA77A9982B9D24EE009D7D2A /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9972B9D24ED009D7D2A /* UserSettings.swift */; };
 		FA77A99A2B9D2833009D7D2A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A9992B9D2833009D7D2A /* SettingsView.swift */; };
+		FAD168732B9FC36300AC840C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD168722B9FC36300AC840C /* ExtensionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		FA77A9962B9D0F5A009D7D2A /* winecalory-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "winecalory-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FA77A9972B9D24ED009D7D2A /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		FA77A9992B9D2833009D7D2A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FAD168722B9FC36300AC840C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		FA77A9532B9D03F2009D7D2A = {
 			isa = PBXGroup;
 			children = (
+				FAD168722B9FC36300AC840C /* ExtensionDelegate.swift */,
 				FA77A9642B9D03F2009D7D2A /* winecalory Watch App */,
 				FA77A9752B9D03F4009D7D2A /* winecalory Watch AppTests */,
 				FA77A97F2B9D03F4009D7D2A /* winecalory Watch AppUITests */,
@@ -324,6 +327,7 @@
 			files = (
 				FA77A9682B9D03F2009D7D2A /* ContentView.swift in Sources */,
 				FA77A9982B9D24EE009D7D2A /* UserSettings.swift in Sources */,
+				FAD168732B9FC36300AC840C /* ExtensionDelegate.swift in Sources */,
 				FA77A9662B9D03F2009D7D2A /* winecaloryApp.swift in Sources */,
 				FA77A9952B9D0D5C009D7D2A /* HealthKitManager.swift in Sources */,
 				FA77A99A2B9D2833009D7D2A /* SettingsView.swift in Sources */,

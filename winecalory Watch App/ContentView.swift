@@ -4,35 +4,54 @@ struct ContentView: View {
     @State private var caloriesBurned: Double = 0
     @StateObject private var userSettings = UserSettings()
     @State private var showingSettings = false
+    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     
     var body: some View {
         let drinkType = userSettings.selectedDrinkType // Получаем выбранный тип напитка
         let caloriesPerServing = drinkType.caloriesPerServing
         let calories = Int(caloriesBurned)
+        let fullServings = calories / caloriesPerServing
 
-        let  completionPercentage = min((calories / caloriesPerServing) * 100, 100)
+        let completionPercentage = CGFloat(calories % caloriesPerServing) / CGFloat(caloriesPerServing) * CGFloat(100)
 
         VStack {
             ScrollView {
                 VStack {
-                    Image(systemName: "wineglass")
-                        .imageScale(.large)
-                        .foregroundColor(.gray) // Базовый цвет иконки, будет виден за пределами градиента
-                        .overlay(
-                            LinearGradient(
-                                colors: [.red, .clear], // Замените на желаемые цвета
-                                startPoint: .bottom,
-                                endPoint: .top
-                            )
-                            .mask(
-                                Image(systemName: "wineglass")
-                                    .imageScale(.large)
-                            )
-                            .frame(height:  CGFloat(completionPercentage) * 44) // Регулируем высоту заполнения в соответствии с процентом
-                        )
-                        .padding(.bottom, 2)
-                    Text(wineText(for: self.caloriesBurned, lang: "en"))
+                    ZStack {
+                        Circle()
+                            .stroke(lineWidth: 4)
+                            .opacity(0.3)
+                            .foregroundColor(.gray)
+                            .frame(width: 70, height: 70)
+
+                        Circle()
+                            .trim(from: 0, to: completionPercentage / 100)
+                            .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                            .foregroundColor(.green)
+                            .rotationEffect(Angle(degrees: 270))
+                            .animation(.linear, value: completionPercentage)
+                            .frame(width: 70, height: 70)
+
+                        Image(systemName: "wineglass")
+                            .imageScale(.large)
+                            .foregroundColor(.gray)
+                        
+                        if fullServings > 0 {
+                            ZStack {
+                                Circle()
+                                    .foregroundColor(.red)
+                                    .frame(width: 20, height: 20)
+                                Text("\(fullServings)")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 12))
+                            }
+                            .offset(x: 15, y: -15)
+                        }
+                    }
+
+                    .padding(.bottom, 2)
+                    Text(wineText(for: self.caloriesBurned, lang: "en", completionPercentage: completionPercentage))
                         .padding() // Убедитесь, что текст не налегает на края
                 }
                 .background(Color.clear) // Устанавливаем прозрачный фон
@@ -48,19 +67,27 @@ struct ContentView: View {
                 SettingsView()
             }
         }
+        .onReceive(timer) { _ in
+            fetchCalories()
+        }   
         .onAppear {
-            HealthKitManager.shared.requestAuthorization { authorized in
-                if authorized {
-                    HealthKitManager.shared.fetchCalories { calories in
-                        self.caloriesBurned = calories
-                    }
+            fetchCalories()
+        }
+        .environmentObject(userSettings)
+            }
+
+    func fetchCalories() {
+        HealthKitManager.shared.requestAuthorization { authorized in
+            if authorized {
+                HealthKitManager.shared.fetchCalories { calories in
+                    self.caloriesBurned = calories + 30 + self.caloriesBurned
+                    
                 }
             }
         }
-        .environmentObject(userSettings)
     }
-
-    func wineText(for caloriesBurned: Double, lang: String) -> String {
+    
+    func wineText(for caloriesBurned: Double, lang: String, completionPercentage: CGFloat) -> String {
         let drinkType = userSettings.selectedDrinkType // Получаем выбранный тип напитка
         let caloriesPerServing = drinkType.caloriesPerServing
 
@@ -121,7 +148,7 @@ struct ContentView: View {
                     return "You have earned zero \(drinkWord) yet!"
                 }
             }()
-            return "\(caloriesText)\n\(noWineText)"
+            return "\(caloriesText) \(completionPercentage)%\n\(noWineText)"
         }
 
         let glassesWord = {
