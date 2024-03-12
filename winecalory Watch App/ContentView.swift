@@ -4,7 +4,7 @@ struct ContentView: View {
     @State private var caloriesBurned: Double = 0
     @StateObject private var userSettings = UserSettings()
     @State private var showingSettings = false
-    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
 
     
     var body: some View {
@@ -20,53 +20,63 @@ struct ContentView: View {
                 VStack {
                     ZStack {
                         Circle()
-                            .stroke(lineWidth: 4)
+                            .stroke(lineWidth: 6)
                             .opacity(0.3)
                             .foregroundColor(.gray)
-                            .frame(width: 70, height: 70)
+                            .frame(width: 100, height: 100)
 
                         Circle()
                             .trim(from: 0, to: completionPercentage / 100)
-                            .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                            .stroke(style: StrokeStyle(lineWidth: 6, lineCap: .round))
                             .foregroundColor(.green)
                             .rotationEffect(Angle(degrees: 270))
                             .animation(.linear, value: completionPercentage)
-                            .frame(width: 70, height: 70)
+                            .frame(width: 100, height: 100)
 
-                        Image(systemName: "wineglass")
+                        Image(systemName: "wineglass.fill")
                             .imageScale(.large)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.primary)
                         
                         if fullServings > 0 {
                             ZStack {
                                 Circle()
                                     .foregroundColor(.red)
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 25, height: 25)
                                 Text("\(fullServings)")
                                     .foregroundColor(.white)
-                                    .font(.system(size: 12))
+                                    .font(.system(size: 14))
                             }
-                            .offset(x: 15, y: -15)
+                            .offset(x: 25, y: -25)
                         }
                     }
-
                     .padding(.bottom, 2)
-                    Text(wineText(for: self.caloriesBurned, lang: "en", completionPercentage: completionPercentage))
-                        .padding() // Убедитесь, что текст не налегает на края
+
+                    Text(wineText(for: self.caloriesBurned, lang: "en"))
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .background(Color.clear) // Устанавливаем прозрачный фон
+                .background(Color.clear)
+            
+                // Кнопка настроек внизу
+                Button(action: {
+                    showingSettings.toggle()
+                }) {
+                    Image(systemName: "gearshape.fill")
+                        .font(.system(size: 24))
+                        .foregroundColor(.primary)
+                        .padding()
+                        .clipShape(Circle())
+                        .shadow(radius: 3)
+                }
+                .sheet(isPresented: $showingSettings) {
+                    SettingsView()
+                }
+                .padding() // Добавляет небольшой отступ вокруг кнопки, чтобы она не прилипала к краям экрана
             }
 
-            Button("Settings") {
-                showingSettings.toggle()
-            }
-            .font(.system(size: 12))
-            .padding(5)
-            .buttonStyle(PlainButtonStyle())
-            .sheet(isPresented: $showingSettings) {
-                SettingsView()
-            }
         }
+
         .onReceive(timer) { _ in
             fetchCalories()
         }   
@@ -80,14 +90,14 @@ struct ContentView: View {
         HealthKitManager.shared.requestAuthorization { authorized in
             if authorized {
                 HealthKitManager.shared.fetchCalories { calories in
-                    self.caloriesBurned = calories + 30 + self.caloriesBurned
+                    self.caloriesBurned = calories //uncomment to debug: + 30 + self.caloriesBurned
                     
                 }
             }
         }
     }
     
-    func wineText(for caloriesBurned: Double, lang: String, completionPercentage: CGFloat) -> String {
+    func wineText(for caloriesBurned: Double, lang: String) -> String {
         let drinkType = userSettings.selectedDrinkType // Получаем выбранный тип напитка
         let caloriesPerServing = drinkType.caloriesPerServing
 
@@ -141,14 +151,15 @@ struct ContentView: View {
             let noWineText = {
                 switch lang {
                 case "ru":
-                    return "Никакого \(drinkWord) не заработано!"
+                    return "Ты не заслужил свое \(drinkWord)!"
                 case "uk":
-                    return "Жодного келиха \(drinkWord) не зароблено!"
+                    return "Ти не заслужив свого \(drinkWord)!"
                 default:
-                    return "You have earned zero \(drinkWord) yet!"
+                    return "You don't deserve your \(drinkWord) yet!"
                 }
             }()
-            return "\(caloriesText) \(completionPercentage)%\n\(noWineText)"
+            //return "\(caloriesText)\n\(noWineText)"
+            return "\(noWineText)"
         }
 
         let glassesWord = {
@@ -177,7 +188,7 @@ struct ContentView: View {
             }
         }()
         
-        return "\(caloriesText)\n\(wineText)"
+        return "\(wineText)"
     }
 
 
