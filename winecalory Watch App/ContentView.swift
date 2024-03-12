@@ -46,7 +46,7 @@ struct ContentView: View {
                                     .foregroundColor(.white)
                                     .font(.system(size: 14))
                             }
-                            .offset(x: 25, y: -25)
+                            .offset(x: 20, y: -20)
                         }
                     }
                     .padding(.bottom, 2)
@@ -54,11 +54,11 @@ struct ContentView: View {
                     Text(wineText(for: self.caloriesBurned, lang: "en"))
                         .font(.headline)
                         .padding()
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .center)
                 }
                 .background(Color.clear)
-            
-                // Кнопка настроек внизу
+                .padding()
+                            
                 Button(action: {
                     showingSettings.toggle()
                 }) {
@@ -72,7 +72,7 @@ struct ContentView: View {
                 .sheet(isPresented: $showingSettings) {
                     SettingsView()
                 }
-                .padding() // Добавляет небольшой отступ вокруг кнопки, чтобы она не прилипала к краям экрана
+                .padding()
             }
 
         }
@@ -90,7 +90,7 @@ struct ContentView: View {
         HealthKitManager.shared.requestAuthorization { authorized in
             if authorized {
                 HealthKitManager.shared.fetchCalories { calories in
-                    self.caloriesBurned = calories //uncomment to debug: + 30 + self.caloriesBurned
+                    self.caloriesBurned = calories //Uncomment to debug: + 30 + self.caloriesBurned
                     
                 }
             }
@@ -155,7 +155,7 @@ struct ContentView: View {
                 case "uk":
                     return "Ти не заслужив свого \(drinkWord)!"
                 default:
-                    return "You don't deserve your \(drinkWord) yet!"
+                    return "You don't deserve your drink yet!"
                 }
             }()
             //return "\(caloriesText)\n\(noWineText)"
