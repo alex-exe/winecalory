@@ -1,5 +1,6 @@
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var caloriesBurned: Double = 0
     @StateObject private var userSettings = UserSettings()
@@ -8,6 +9,7 @@ struct ContentView: View {
 
     
     var body: some View {
+        
         let drinkType = userSettings.selectedDrinkType // Получаем выбранный тип напитка
         let caloriesPerServing = drinkType.caloriesPerServing
         let calories = Int(caloriesBurned)
@@ -32,11 +34,11 @@ struct ContentView: View {
                             .rotationEffect(Angle(degrees: 270))
                             .animation(.linear, value: completionPercentage)
                             .frame(width: 100, height: 100)
-
-                        Image(systemName: "wineglass.fill")
+                        
+                        Image(systemName: drinkType.iconName)
                             .imageScale(.large)
                             .foregroundColor(.primary)
-                        
+                                                
                         if fullServings > 0 {
                             ZStack {
                                 Circle()

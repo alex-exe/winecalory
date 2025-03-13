@@ -14,7 +14,6 @@ enum DrinkType: String, CaseIterable, Identifiable {
 
     var id: String { self.rawValue }
 
-    // Добавьте сюда количество калорий на стандартную порцию каждого напитка
     var caloriesPerServing: Int {
         switch self {
         case .wine:
@@ -35,6 +34,19 @@ enum DrinkType: String, CaseIterable, Identifiable {
             return NSLocalizedString("Beer", comment: "Drink type")
         case .ale:
             return NSLocalizedString("Ale", comment: "Drink type")
+        }
+    }
+
+    // Computed property to return the appropriate SF Symbol for each drink type
+    var iconName: String {
+        switch self {
+        case .wine:
+            return "wineglass.fill"
+        case .beer:
+            return "mug.fill"
+        case .ale:
+            // For example, use "bottle.fill" if it's available or choose a custom asset.
+            return "mug"
         }
     }
 }
